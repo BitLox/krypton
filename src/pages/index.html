@@ -248,237 +248,10 @@ title: Home
             <h4 class="subtitle is-6 is-light has-text-centered is-compact">With an asset class this hot, we have to restrict the offerings on the Initial Curation Offer. Please contact us soonest to see if you qualify.</h4>
 
             <!-- Content wrapper -->
-            <div class="content-wrapper is-large">
-
-                <!-- Flying tabs wrapper -->
-                <div x-data="initTabs()" x-init="setupCountdown()" class="flying-wrapper">
-                    <!-- Tabs container -->
-                    <div class="flying-tabs-container">
-                        <!-- Tabs -->
-                        <div class="flying-tabs">
-                            <div @click="switchTabs($event)" class="flying-child tab-1" data-tab="tab-1" :class="{
-                                'is-active': activeTab === 'tab-1',
-                                '': activeTab != 'tab-1'
-                            }"><a href="javascript:void(0);">ICO</a></div>
-                            <div @click="switchTabs($event)" class="flying-child tab-2" data-tab="tab-2" :class="{
-                                'is-active': activeTab === 'tab-2',
-                                '': activeTab != 'tab-2'
-                            }"><a href="javascript:void(0);">TOKEN</a></div>
-                            <div @click="switchTabs($event)" class="flying-child tab-3" data-tab="tab-3" :class="{
-                                'is-active': activeTab === 'tab-3',
-                                '': activeTab != 'tab-3'
-                            }"><a href="javascript:void(0);">PROFIT</a></div>
-                            <div @click="switchTabs($event)" class="flying-child tab-4" data-tab="tab-4" :class="{
-                                'is-active': activeTab === 'tab-4',
-                                '': activeTab != 'tab-4'
-                            }"><a href="javascript:void(0);">BOUNTY</a></div>
-                            <div class="slider"></div>
-                        </div>
-                    </div>
-
-                    <!-- Tabs content wrapper -->
-                    <div class="flying-tabs-content">
-                        <!-- Tab 1 -->
-                        <div  class="tab-content" :class="{
-                                'is-active': activeTab === 'tab-1',
-                                '': activeTab != 'tab-1'
-                            }">
-                            <div class="columns is-vcentered tab-content-wrapper">
-                                <!-- ICO Terms -->
-                                <div class="column is-5 is-offset-1">
-                                    <div class="text-content">
-                                        <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">ICO TERMS</h4>
-                                        <ul class="custom-bullet-list">
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Presale</span>
-                                                <br>
-                                                <span class="item-content">Presale starts on Apr 8 2021 (9:00am GMT)</span>
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Sale</span>
-                                                <br>
-                                                <span class="item-content">Token sales starts on Jun 8 2021 (12:00am GMT)</span>
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Bonus</span>
-                                                <br>
-                                                <span class="item-content">Bonus starts on July 29 2021 (12:00am GMT)</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- ICO COuntdown -->
-                                <div class="column is-5">
-                                    <!-- Card -->
-                                    <div class="ico-card animated preFadeInUp fadeInUp">
-                                        <!-- Countdown -->
-                                        <ul id="countdown" class="is-ico">
-                                            <li id="days">
-                                                <div id="days-count" class="timer-number">00</div>
-                                                <div class="label">Days</div>
-                                            </li>
-                                            <li id="hours">
-                                                <div id="hours-count" class="timer-number">00</div>
-                                                <div class="label">Hours</div>
-                                            </li>
-                                            <li id="minutes">
-                                                <div id="minutes-count" class="timer-number">00</div>
-                                                <div class="label">Minutes</div>
-                                            </li>
-                                            <li id="seconds">
-                                                <div id="seconds-count" class="timer-number">00</div>
-                                                <div class="label">Seconds</div>
-                                            </li>
-                                        </ul>
-                                        <!-- Progress bar -->
-                                        <div class="progress-block">
-                                            <!-- Tags -->
-                                            <div class="progress-tags">
-                                                <div>Presale</div>
-                                                <div>Soft Cap</div>
-                                                <div>Bonus</div>
-                                            </div>
-                                            <progress class="progress ico-progress" value="65" max="100">65%</progress>
-                                        </div>
-
-                                        <!-- Button -->
-                                        <div class="button-block">
-                                            <a href="#" class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded">
-                                                <span class="text">Join the ICO Now</span>
-                                                <span class="front-gradient"></span>
-                                            </a>
-                                        </div>
-
-                                        <!-- Icons -->
-                                        <div class="icon-block">
-                                            <i class="cf cf-btc"></i>
-                                            <i class="cf cf-eth"></i>
-                                            <i class="cf cf-ltc"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Tab 1 -->
-
-                        <!-- Tab 2 -->
-                        <div class="tab-content" :class="{
-                                'is-active': activeTab === 'tab-2',
-                                '': activeTab != 'tab-2'
-                            }">
-                            <div class="columns is-vcentered tab-content-wrapper">
-                                <!-- Tab content -->
-                                <div class="column is-5 is-offset-1">
-                                    <div class="text-content">
-                                        <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">TOKEN RATES</h4>
-                                        <ul class="custom-bullet-list">
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Tokens Sales</span>
-                                                <br>
-                                                <span class="item-content">1 200 000 KP (22%)</span>
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Token Exchange</span>
-                                                <br>
-                                                <span class="item-content">1 BTC = 2200 KP, 1 ETH = 825 KP</span> 
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Transactions</span>
-                                                <br>
-                                                <span class="item-content">Minimal transaction amount is 1 BTC, 1 ETH, 1 LTC</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Tab image -->
-                                <div class="column is-5">
-                                    <img class="animated preFadeInUp fadeInUp" src="/img/illustrations/tokens.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Tab 2 -->
-
-                        <!-- Tab 3 -->
-                        <div class="tab-content" :class="{
-                                'is-active': activeTab === 'tab-3',
-                                '': activeTab != 'tab-3'
-                            }">
-                            <div class="columns is-vcentered tab-content-wrapper">
-                                <!-- Tab content -->
-                                <div class="column is-5 is-offset-1">
-                                    <div class="text-content">
-                                        <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">PROFIT</h4>
-                                        <ul class="custom-bullet-list">
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Tokens Sales</span>
-                                                <br>
-                                                <span class="item-content">1 200 000 KP (22%)</span>
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Token Exchange</span>
-                                                <br>
-                                                <span class="item-content">1 BTC = 2200 KP, 1 ETH = 825 KP</span> 
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Transactions</span>
-                                                <br>
-                                                <span class="item-content">Minimal transaction amount is 1 BTC, 1 ETH, 1 LTC</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Tab image -->
-                                <div class="column is-5">
-                                    <img class="animated preFadeInUp fadeInUp" src="/img/illustrations/charts.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Tab 3 -->
-
-                        <!-- Tab 4 -->
-                        <div class="tab-content" :class="{
-                                'is-active': activeTab === 'tab-4',
-                                '': activeTab != 'tab-4'
-                            }">
-                            <div class="columns is-vcentered tab-content-wrapper">
-                                <!-- Tab content -->
-                                <div class="column is-5 is-offset-1">
-                                    <div class="text-content">
-                                        <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">REWARDS & BOUNTIES</h4>
-                                        <ul class="custom-bullet-list">
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Tokens Sales</span>
-                                                <br>
-                                                <span class="item-content">1 200 000 KP (22%)</span>
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Token Exchange</span>
-                                                <br>
-                                                <span class="item-content">1 BTC = 2200 KP, 1 ETH = 825 KP</span> 
-                                            </li>
-                                            <li class="animated preFadeInUp fadeInUp">
-                                                <span>Transactions</span>
-                                                <br>
-                                                <span class="item-content">Minimal transaction amount is 1 BTC, 1 ETH, 1 LTC</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Tab image -->
-                                <div class="column is-5">
-                                    <img class="animated preFadeInUp fadeInUp" src="/img/illustrations/bounty.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Tab 4 -->
-                    </div>
-                </div>
-
-            </div>
             <!-- Content wrapper -->
         </div>
         <!-- /Container -->
-    </section> -->
+    </section>
     <!-- /ICO section -->
 
     <!-- App section -->
@@ -563,7 +336,7 @@ title: Home
                                 </div>
                                 <!-- Member meta -->
                                 <div class="member-info">
-                                    <h4 class="title is-light is-6 is-tight">John Campbell</h4>
+                                    <h4 class="title is-light is-6 is-tight">John Carbell</h4>
                                     <div class="position">Founder / CEO</div>
                                     <p class="description">John is a Crypto enthusiast. He was one of the first blockchain actors in the world.</p>
                                 </div>
@@ -584,7 +357,7 @@ title: Home
                                     <img class="is-real" src="/img/team/lucy.jpg" alt="">
                                 </div>
                                 <div class="member-info">
-                                    <h4 class="title is-light is-6 is-tight">Lucy Wong</h4>
+                                    <h4 class="title is-light is-6 is-tight">Lucy Wang</h4>
                                     <div class="position">Founder / CFO</div>
                                     <p class="description">Lucy is a Crypto enthusiast. She was one of the first blockchain actors in the world.</p>
                                 </div>
@@ -605,9 +378,9 @@ title: Home
                                     <img class="is-real" src="/img/team/joshua.jpg" alt="">
                                 </div>
                                 <div class="member-info">
-                                    <h4 class="title is-light is-6 is-tight">Joshua Stevens</h4>
+                                    <h4 class="title is-light is-6 is-tight">Joseph Strong</h4>
                                     <div class="position">Engineer</div>
-                                    <p class="description">Joshua is a Crypto enthusiast. He was one of the first blockchain actors in the world.</p>
+                                    <p class="description">Joseph is a Crypto enthusiast. He was one of the first blockchain actors in the world.</p>
                                 </div>
                             </div>
                         </div>
@@ -621,7 +394,7 @@ title: Home
                     <div class="column is-hidden-mobile"></div>
 
                     <!-- Team member -->
-                    <div class="column is-3">
+                    <!-- <div class="column is-3">
                         <div class="team-member-container">
                             <div class="dark-card">
                                 <div class="avatar">
@@ -639,10 +412,10 @@ title: Home
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Team member -->
-                    <div class="column is-3">
+                    <!-- <div class="column is-3">
                         <div class="team-member-container">
                             <div class="dark-card">
                                 <div class="avatar">
@@ -660,10 +433,10 @@ title: Home
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Team member -->
-                    <div class="column is-3">
+                    <!-- <div class="column is-3">
                         <div class="team-member-container">
                             <div class="dark-card">
                                 <div class="avatar">
@@ -681,7 +454,7 @@ title: Home
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="column is-hidden-mobile"></div>
 
@@ -706,7 +479,7 @@ title: Home
                                 </div>
                                 <!-- Meta -->
                                 <div class="info">
-                                    <div class="subtitle is-6 is-light is-compressed">Rafael Agostino</div>
+                                    <div class="subtitle is-6 is-light is-compressed">Roger Agollo</div>
                                     <div class="position">Board Member</div>
                                 </div>
                             </div>
@@ -719,7 +492,7 @@ title: Home
                                     <img src="/img/team/a2.jpg" alt="" data-aos="fade-down" data-aos-delay="300" data-aos-offset="200" data-aos-easing="ease-out-quart">
                                 </div>
                                 <div class="info">
-                                    <div class="subtitle is-6 is-light is-compressed">Marysa Vosniak</div>
+                                    <div class="subtitle is-6 is-light is-compressed">Marysha Valenti</div>
                                     <div class="position">Board Member</div>
                                 </div>
                             </div>
@@ -732,7 +505,7 @@ title: Home
                                     <img src="/img/team/a3.jpg" alt="" data-aos="fade-down" data-aos-delay="500" data-aos-offset="200" data-aos-easing="ease-out-quart">
                                 </div>
                                 <div class="info">
-                                    <div class="subtitle is-6 is-light is-compressed">Glenn Mitchells</div>
+                                    <div class="subtitle is-6 is-light is-compressed">Glenn Michaels</div>
                                     <div class="position">Board Member</div>
                                 </div>
                             </div>
@@ -745,7 +518,7 @@ title: Home
                                     <img src="/img/team/a4.jpg" alt="" data-aos="fade-down" data-aos-delay="700" data-aos-offset="200" data-aos-easing="ease-out-quart">
                                 </div>
                                 <div class="info">
-                                    <div class="subtitle is-6 is-light is-compressed">Gary Simmons</div>
+                                    <div class="subtitle is-6 is-light is-compressed">Gene Simms</div>
                                     <div class="position">Crypto Finance Analyst</div>
                                 </div>
                             </div>
@@ -758,7 +531,7 @@ title: Home
                                     <img src="/img/team/a5.jpg" alt="" data-aos="fade-down" data-aos-delay="900" data-aos-offset="200" data-aos-easing="ease-out-quart">
                                 </div>
                                 <div class="info">
-                                    <div class="subtitle is-6 is-light is-compressed">Olga Broniszewska</div>
+                                    <div class="subtitle is-6 is-light is-compressed">Jamie Bronis</div>
                                     <div class="position">Crypto Finance Analyst</div>
                                 </div>
                             </div>
@@ -973,7 +746,7 @@ title: Home
                                                 <div class="image is-32x32">
                                                     <img src="/img/team/joshua.jpg" alt="">
                                                 </div>
-                                                <div class="author-name">by Thes Quid</div>
+                                                <div class="author-name">by Patel Klingen</div>
                                             </div>
                                             <div class="stats-block">
                                                 <div class="comments">
@@ -1000,7 +773,7 @@ title: Home
                                     <!-- Content -->
                                     <div class="content">
                                         <!--div class="rounded"></div-->
-                                        <div class="post-title">What is Crypto mining ?  <span class="blog-date">02.04.2021</span></div>
+                                        <div class="post-title">What is NFT re-fungibility?  <span class="blog-date">02.04.2021</span></div>
                                         <p>
                                             Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı
                                             bilinmeyen bir matbaacının bir hurufat numune kitabı...
@@ -1032,12 +805,12 @@ title: Home
                     </div>
 
                     <!-- CTA -->
-                    <div class="cta-wrapper has-text-centered">
+                    <!-- <div class="cta-wrapper has-text-centered">
                         <a href="#" class="button k-button k-primary raised has-gradient is-fat is-bold">
                             <span class="text">More Articles</span>
                             <span class="front-gradient"></span>
                         </a>
-                    </div>
+                    </div> -->
 
                     <!-- Partner logos -->
                     <div class="partners">
